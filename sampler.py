@@ -23,7 +23,7 @@ def get_interval(_time: datetime, interval_min: int) -> datetime:
         raise ValueError("Expected positive interval [min]")
 
     if interval_min >= 60:
-        raise NotImplementedError("Intervals [min] higher than 1 [hour] are not supported")
+        raise NotImplementedError("Interval [min] higher than 1 [hour] is not supported")
 
     if (_time.second == 0 and
         _time.minute in [i * interval_min for i in range(60 // interval_min)]):
